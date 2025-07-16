@@ -2,13 +2,23 @@
 
 ## HEAD (unreleased)
 
-## 21.0.0-alpha.1
+## 22.0.0-alpha.1
 
-- Fix: Add missing package files from deployment.
+- Enhancement: Exporting isNullOrUndefined function and ColumnChangesService service to be used externally.
 
-## 21.0.0-alpha.0
+## 22.0.0-alpha.0
 
-- Breaking: support for angular 19
+- Enhancement: Added support for Angular 20
+- Breaking: Removed support for Angular 17 and earlier versions
+
+## 21.1.0
+
+- Fix: Prevent browser page crash when user inputs large Arrays
+
+## 21.0.0
+
+- Fix: Add missing package files from deployment
+- Breaking: support for angular 17-19
 
 ## 20.1.0
 
