@@ -56,6 +56,7 @@ import { getPositionFromEvent } from '../../utils/events';
       <span (click)="onSort()" [class]="sortClass"> </span>
     </div>
     @if (column.resizeable) {
+    <span class="resize-handle-divider"></span>
     <span
       class="resize-handle"
       (mousedown)="onMousedown($event)"

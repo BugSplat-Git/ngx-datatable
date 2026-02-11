@@ -8,8 +8,6 @@
 
   :host-context(ngx-datatable.fixed-header) & {
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &.sortable {
@@ -34,6 +32,18 @@
   cursor: pointer;
 }
 
+// Column divider line at the right edge of the cell
+.resize-handle-divider {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--ngx-datatable-resize-handle-color, #e0e0e0);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .resize-handle,
 .resize-handle--not-resizable {
   display: inline-block;
@@ -41,13 +51,15 @@
   right: 0;
   top: 0;
   bottom: 0;
-  width: 5px;
-  padding: 0 4px;
+  width: 20px;
+  padding: 0;
   visibility: hidden;
+  transform: translateX(50%);
+  z-index: 2;
 }
 
 .resize-handle {
-  cursor: ew-resize;
+  cursor: col-resize;
 
   :host(.resizeable:hover) & {
     visibility: visible;

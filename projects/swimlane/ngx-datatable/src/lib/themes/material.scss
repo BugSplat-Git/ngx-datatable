@@ -259,14 +259,12 @@ $datatble-ghost-cell-animation-duration: 10s;
       }
 
       &.dragging {
-        .resize-handle {
-          border-right: none;
-        }
+        --ngx-datatable-resize-handle-color: transparent;
       }
     }
 
-    .resize-handle {
-      border-right: solid 1px $datatable-header-resize-handle-color;
+    .datatable-header-cell {
+      --ngx-datatable-resize-handle-color: #{$datatable-header-resize-handle-color};
     }
   }
 
